@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Profile</title>
+</head>
+<body>
+
+    <h1>MARIAM HAMDY</h1>
+    <p>I'm 20 years old and I love programming.</p>
+
+    <h2>Things I Like:</h2>
+    <ul>
+        <li>Coding</li>
+        <li>Reading</li>
+        <li>Shopping</li>
+    </ul>
+
+    <p>Visit my favorite site: 
+        <a href="https://www.google.com" target="_blank">Google</a>
+    </p>
+
+    <img src="image.jpeg" alt="Picture" width="150">
+
+</body>
+</html>
