@@ -1,0 +1,357 @@
+/* General Body Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Gradient background with blue, navy, and light blue */
+    background: linear-gradient(to right, #000080, #1e90ff, #87cefa); /* Navy, DodgerBlue, LightSkyBlue */
+    color: #fff; /* White text for better contrast */
+    min-height: 100vh; /* Ensure body takes at least full viewport height */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header and Navigation Bar */
+header {
+    background-color: rgba(0, 0, 128, 0.7); /* Semi-transparent navy background for header */
+    padding: 15px 20px; /* Added horizontal padding */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between; /* Space out nav and button */
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+    position: relative; /* For the separator */
+}
+
+nav ul li:not(:last-child)::after {
+    content: '|';
+    position: absolute;
+    right: -20px; /* Adjust as needed for spacing */
+    color: #fff; /* White separator */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #87cefa; /* LightSkyBlue on hover */
+}
+
+/* "Download my CV" Button - Top Right */
+.download-cv-btn {
+    background-color: #1e90ff; /* DodgerBlue button background */
+    color: #fff; /* White text for button */
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.download-cv-btn:hover {
+    background-color: #0000cd; /* MediumBlue on hover */
+}
+
+/* Hero Section ("Hello to Amgad's Portfolio") */
+.hero-section {
+    text-align: center;
+    padding: 180px 20px 100px; /* Top, Right/Left, Bottom */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 80px); /* Adjust height to fill most of the viewport, minus header height */
+    flex-grow: 1; /* Allows this section to grow and take available space */
+}
+
+.hero-greeting {
+    font-size: 2em;
+    font-weight: 300;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.hero-name {
+    font-size: 4em;
+    font-weight: 700;
+    color: #87cefa; /* LightSkyBlue for the name */
+    margin-top: 0;
+}
+
+/* Main Content Area */
+main {
+    flex-grow: 1; /* Allows main to grow and take available space below hero */
+    padding-bottom: 50px; /* Add some padding at the bottom of the content */
+}
+
+/* Sections Styling */
+.section {
+    padding: 80px 5%;
+    margin: 40px auto;
+    max-width: 900px;
+    background-color: rgba(0, 0, 128, 0.4); /* Semi-transparent navy background for sections */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2.5em;
+    color: #1e90ff; /* DodgerBlue for section titles */
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.section p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.quote {
+    font-style: italic;
+    color: #c0c0c0; /* Lighter grey for quotes */
+    margin-top: 30px;
+}
+
+/* Skills Section */
+#skills ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    text-align: left;
+}
+
+#skills ul li {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Center text within each skill box */
+}
+
+/* Education Section */
+#education .education-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+#education .education-item h3 {
+    color: #87cefa; /* LightSkyBlue for education item titles */
+    margin-top: 0;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+}
+
+#education .education-item h3 .fas {
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+#education .education-item ul {
+    list-style: none; /* Remove default bullet points for education list */
+    padding: 0;
+    margin-top: 10px;
+}
+
+#education .education-item ul li {
+    margin-bottom: 5px;
+    font-size: 1em;
+}
+
+/* Projects Section */
+#projects .project-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+#projects .project-item h3 {
+    color: #87cefa; /* LightSkyBlue for project item titles */
+    margin-top: 0;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+#projects .project-item ul {
+    list-style: disc; /* Keep default bullet points for project details */
+    margin-left: 20px;
+    padding: 0;
+}
+
+#projects .project-item ul li {
+    margin-bottom: 5px;
+    font-size: 1em;
+}
+
+/* Contact Form */
+#contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact .form-group {
+    text-align: left;
+}
+
+#contact .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #fff;
+}
+
+#contact .form-group input[type="text"],
+#contact .form-group input[type="email"],
+#contact .form-group textarea {
+    width: calc(100% - 20px); /* Account for padding */
+    padding: 10px;
+    border: 1px solid #1e90ff; /* DodgerBlue border */
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 1em;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+#contact .form-group input::placeholder,
+#contact .form-group textarea::placeholder {
+    color: #aaa;
+}
+
+#contact .form-group textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+
+#contact button[type="submit"] {
+    background-color: #1e90ff; /* DodgerBlue for submit button */
+    color: #fff; /* White text for submit button */
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+    align-self: center; /* Center the button in the flex container */
+}
+
+#contact button[type="submit"]:hover {
+    background-color: #0000cd; /* MediumBlue on hover */
+}
+
+/* Footer (Empty in HTML, but good to have basic styling) */
+footer {
+    padding: 20px;
+    text-align: center;
+    color: #c0c0c0; /* Lighter grey for footer text */
+    font-size: 0.9em;
+    margin-top: 50px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack nav and button */
+        padding: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 15px; /* Space between nav and button */
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+
+    nav ul li:not(:last-child)::after {
+        content: none; /* Remove separator on smaller screens */
+    }
+
+    .download-cv-btn {
+        margin-top: 10px;
+        width: fit-content; /* Make button fit its content */
+    }
+
+    .hero-section {
+        padding: 150px 20px 80px; /* Adjust padding for smaller screens */
+    }
+
+    .hero-name {
+        font-size: 2.5em;
+    }
+
+    .section {
+        padding: 40px 3%;
+        margin: 20px auto;
+    }
+
+    .section h2 {
+        font-size: 2em;
+    }
+
+    #skills ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-name {
+        font-size: 2em;
+    }
+
+    .hero-greeting {
+        font-size: 1.5em;
+    }
+
+    .section h2 {
+        font-size: 1.8em;
+    }
+
+    #contact .form-group input[type="text"],
+    #contact .form-group input[type="email"],
+    #contact .form-group textarea {
+        width: 100%; /* Full width for form inputs */
+    }
+}
